@@ -1,3 +1,12 @@
+Forked from the yoctoproject version.
+
+This [dylan-fix] branch contains a few patches to the upstream [dylan]
+branch to fix compile issues with the latest Yocto [dylan].
+
+Only tested building for a Gumstix Overo 3.5.7 kernel system.
+
+---- Original README ----
+
 The official OpenEmbedded/Yocto BSP layer for Texas Instruments platforms.
 
 It is hosted on http://git.yoctoproject.org/cgit/cgit.cgi/meta-ti/ with the
