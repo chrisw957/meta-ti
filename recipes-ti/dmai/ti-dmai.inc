@@ -8,6 +8,8 @@ LICENSE = "BSD"
 require recipes-ti/includes/ti-paths.inc
 require recipes-ti/includes/ti-staging.inc
 
+INSANE_SKIP_${PN} = "installed-vs-shipped"
+
 PROVIDES += "ti-dmai-apps"
 
 PE = "1"

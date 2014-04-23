@@ -10,6 +10,8 @@ LICENSE = "BSD"
 require recipes-ti/includes/ti-paths.inc
 require recipes-ti/includes/ti-staging.inc
 
+INSANE_SKIP_${PN} = "installed-vs-shipped"
+
 PROVIDES += "ti-codec-engine-examples"
 
 PR = "${MACHINE_KERNEL_PR}"

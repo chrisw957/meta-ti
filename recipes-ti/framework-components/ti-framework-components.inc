@@ -8,6 +8,8 @@ LIC_FILES_CHKSUM = "file://framework_components_2_26_00_01_manifest.html;md5=325
 require recipes-ti/includes/ti-paths.inc
 require recipes-ti/includes/ti-staging.inc
 
+INSANE_SKIP_${PN} = "installed-vs-shipped"
+
 PR = "r1"
 
 S = "${WORKDIR}/framework_components_${PV}"

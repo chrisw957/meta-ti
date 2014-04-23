@@ -8,6 +8,8 @@ LIC_FILES_CHKSUM = "file://xdais_6_26_01_03_manifest.html;md5=a5a675d49db2f658bb
 require ../includes/ti-paths.inc
 require ../includes/ti-staging.inc
 
+INSANE_SKIP_${PN} = "installed-vs-shipped"
+
 PR = "r1"
 
 S = "${WORKDIR}/xdais_${PV}"

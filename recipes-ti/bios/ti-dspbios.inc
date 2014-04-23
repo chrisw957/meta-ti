@@ -10,6 +10,8 @@ require ../includes/ti-paths.inc
 require ../includes/ti-staging.inc
 require ../includes/ti-eula-unpack.inc
 
+INSANE_SKIP_${PN} = "installed-vs-shipped"
+
 TI_BIN_UNPK_WDEXT="/bios_${PV}"
 S = "${WORKDIR}${TI_BIN_UNPK_WDEXT}"
 

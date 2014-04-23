@@ -7,6 +7,8 @@ LIC_FILES_CHKSUM = "file://gpl_2.0.txt;md5=ebb5c50ab7cab4baeffba14977030c07"
 
 # TODO : Hardcoded path to evm3530 - need to fix when adding omap24xx/dm6446 (other lpm targets)
 
+INSANE_SKIP_${PN} = "installed-vs-shipped"
+
 require ../includes/ti-paths.inc
 require ../includes/ti-staging.inc
 

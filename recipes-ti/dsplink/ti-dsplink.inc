@@ -19,6 +19,8 @@ require ../includes/ti-staging.inc
 PROVIDES = "ti-dsplink-module"
 PROVIDES += "ti-dsplink-examples"
 
+INSANE_SKIP_${PN} = "installed-vs-shipped"
+
 # This package builds a kernel module, use kernel PR as base and append a local version
 PR = "${MACHINE_KERNEL_PR}"
 PR_append = "j"

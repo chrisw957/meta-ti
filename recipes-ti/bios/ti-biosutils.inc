@@ -7,6 +7,8 @@ LIC_FILES_CHKSUM = "file://packages/ti/bios/utils/Load.c;md5=e666d585907c3456e82
 require ../includes/ti-paths.inc
 require ../includes/ti-staging.inc
 
+INSANE_SKIP_${PN} = "installed-vs-shipped"
+
 S = "${WORKDIR}/biosutils_${PV}"
 
 SRC_URI = "http://software-dl.ti.com/dsps/dsps_public_sw/sdo_sb/targetcontent/Bios_Utils/${PV}${PVsuffix}/exports/biosutils_${PV}.tar.gz;name=biosutilstarball"
