@@ -55,7 +55,25 @@ In your image recipe, for the gst-ti ddompe branch, add:
 Once booted, you will generally still have to manually load the ti modules, depending on your startup script configuration.  Do this with:
 
     /etc/init.d/gstti-init start
-    
+
+## First Boot
+When first booting your Overo, you should probably set your nand environment.  
+Insert your microSD card and power up.  
+Stop the uboot countdown, and enter:  
+
+     nand erase 240000 20000
+     reset
+
+Stop the uboot countdown again, and enter:
+
+     setenv mem 'mem=96M@0x80000000 mem=384M@0x88000000'
+     setenv mpurate 800
+     setenv mmcargs 'setenv bootargs console=${console} mpurate=${mpurate} vram=${vram} omapfb.mode=dvi:${dvimode} omapfb.debug=y omapfb.vram=${fbvram} omapdss.def_disp=${defaultdisplay} ${mem} root=${mmcroot} rootfstype=${mmcrootfstype}'
+     saveenv
+     reset
+
+This time you can let your system fully boot.
+
 ## Sample Pipelines
 Here is one which encodes vga testsource:
 
