@@ -9,7 +9,7 @@
 rmmod cmemk 2>/dev/null
 
 modprobe cmemk allowOverlap=1 phys_start=0x86300000 phys_end=0x87300000 \
-        pools=1x5250000,6x829440,1x345600,1x691200,1x1
+        pools=2x5531400,1x2457600,2x829440,1x345600,1x691200,1x1
 
 # insert DSP/BIOS Link driver
 modprobe dsplinkk
