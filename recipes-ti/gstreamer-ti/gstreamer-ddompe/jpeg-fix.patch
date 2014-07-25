@@ -1,0 +1,14 @@
+Index: ticodecplugin/src/gsttiimgenc1.c
+===================================================================
+--- ticodecplugin.orig/src/gsttiimgenc1.c	2014-07-24 21:26:12.000000000 -0500
++++ ticodecplugin/src/gsttiimgenc1.c	2014-07-24 21:44:28.954094628 -0500
+@@ -235,6 +235,9 @@
+                     Buffer_Handle hDstBuf){
+     Int             ret;
+ 
++    /*re-set of params because we lost them*/
++    dmaienc->hCodec = Ienc1_control(dmaienc->hCodec,(IMGENC1_DynamicParams *)dmaienc->dynParams);
++
+     /* Invoke the image encoder */
+     GST_DEBUG("invoking the image encoder,(%p, %p)\n",
+         Buffer_getUserPtr(hSrcBuf),Buffer_getUserPtr(hDstBuf));
