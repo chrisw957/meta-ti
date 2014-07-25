@@ -52,6 +52,10 @@ In your image recipe, for the gst-ti ddompe branch, add:
 
     gstreamer-ddompe
 
+Once booted, you will generally still have to manually load the ti modules, depending on your startup script configuration.  Do this with:
+
+    /etc/init.d/gstti-init start
+    
 ## Sample Pipelines
 Here is one which encodes vga testsource:
 
