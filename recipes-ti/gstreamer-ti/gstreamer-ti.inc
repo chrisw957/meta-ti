@@ -72,7 +72,7 @@ export LINK_XDC_ROOT   = "${LINK_INSTALL_DIR}"
 # Sould only need this if we change from default server
 
 export CODEC_SERVER  = "${installdir}/ti-codecs-server/cs.x64P"
-CPPFLAGS_append = " -DPlatform_${PLATFORM}"
+CPPFLAGS_append = " -DPlatform_dm3730"
 
 # We are still using encode/decode combo for DM6446
 export ENCODE_COMBO    = "${installdir}/ti-codecs-server/encodeCombo.x64P"
